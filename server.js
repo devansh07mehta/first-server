@@ -4,6 +4,17 @@ const port  = 8081;
 
 // const port  = 8082; 
 // port no. 8082 also working fine but use default one 8081 as it is free, no load upon it.
+
+const toDoList = ["Need to learn", "Need to code"];
+
+// http methods
+
+// Get => It helps to get certain details from server / default method / & it can directly work on any browser.
+// Put => Overwrites, fully update the details
+// Delete => It helps to delete certain data from the server.
+// Patch => It helps to update certain fields / very few fields.
+// Post => This method helps to send the data to the server by hiding it in the url. It is mainly used in certain authentication pages.(like login, register).
+
 http
     .createServer((req,res) => {
     res.writeHead(200, {"Content-Type":"text/html"}); 
@@ -22,6 +33,11 @@ http
     });
 
     // http://localhost:8081
+    // http://localhost:8081/home
+    // http://localhost:8081/aboutUs
+    // http://localhost:8081/contactUs
+
+
     // nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 
     // Commands for npm
