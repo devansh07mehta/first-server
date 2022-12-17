@@ -18,7 +18,7 @@ const toDoList = ["Need to learn", "Need to code"];
 http
     .createServer((req,res) => {
     res.writeHead(200, {"Content-Type":"text/html"}); 
-    // 200 OK
+    // 200 OK - Positive Signal
     // Standard response for successful HTTP requests.
 
     // res.writeHead(401, {"Content-Type":"text/html"}); 
@@ -29,10 +29,14 @@ http
     res.end();
     })
     .listen(port, () => {
-    console.log(`My NodeJs server started on port ${port}`);
+        // .listen will listen the request from the browser or client & respond appropriately using res.write method.
+        console.log(`My NodeJs server started on port ${port}`);
     });
 
     // http://localhost:8081
+    // http://localhost:8081/
+
+    // Routes 
     // http://localhost:8081/home
     // http://localhost:8081/aboutUs
     // http://localhost:8081/contactUs
