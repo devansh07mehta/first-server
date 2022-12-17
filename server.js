@@ -5,8 +5,6 @@ const port  = 8081;
 // const port  = 8082; 
 // port no. 8082 also working fine but use default one 8081 as it is free, no load upon it.
 
-const toDoList = ["Need to learn", "Need to code"];
-
 // http methods
 
 // Get => It helps to get certain details from server / default method / & it can directly work on any browser.
@@ -17,16 +15,16 @@ const toDoList = ["Need to learn", "Need to code"];
 
 http
     .createServer((req,res) => {
-    res.writeHead(200, {"Content-Type":"text/html"}); 
-    // 200 OK - Positive Signal
-    // Standard response for successful HTTP requests.
+        res.writeHead(200, {"Content-Type":"text/html"}); 
+     // 200 OK - Positive Signal
+     // Standard response for successful HTTP requests.
 
-    // res.writeHead(401, {"Content-Type":"text/html"}); 
-    // 401 Unauthorized
-    // Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided. 401 semantically means "unauthorised", the user does not have valid authentication credentials for the target resource.
+     // res.writeHead(401, {"Content-Type":"text/html"}); 
+     // 401 Unauthorized
+     // Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided. 401 semantically means "unauthorised", the user does not have valid authentication credentials for the target resource.
 
-    res.write("<h2>Hello, this is from my new server which is create by devansh mehta</h2>");
-    res.end();
+        res.write("<h2>Hello, this is from my new server which is create by devansh mehta</h2>");
+        res.end();
     })
     .listen(port, () => {
         // .listen will listen the request from the browser or client & respond appropriately using res.write method.
