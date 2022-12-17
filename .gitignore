@@ -1,0 +1,5 @@
+# node_modules
+# node_modules opacity changes from green to gray.
+
+# package-lock.json
+# all the files specified in gitignore are ignored while pushing code in github.
